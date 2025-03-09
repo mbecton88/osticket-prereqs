@@ -61,10 +61,8 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
         * "Control Panel" -> "Programs" -> "Turn Windows features on or off."
         * Expand "Internet Information Services" -> "World Wide Web Services" -> "Application Development Features" -> Check "CGI."
         * Click "OK."<br>
-        ![image](https://github.com/user-attachments/assets/cc3531a9-8e34-402e-9afd-2b615ac87647)<br>
-![image](https://github.com/user-attachments/assets/15e777a5-1102-4e21-bf58-b2cf53d2ea15)
-      
-<br>
+      ![image](https://github.com/user-attachments/assets/0c7a477d-975e-4fca-9dee-0eed44a4caab)<br>
+![image](https://github.com/user-attachments/assets/82830940-631d-4f62-b0cf-ea136703ac2c)<br>
 
 ## 5. Installing Required Components (Dependencies)
 
@@ -75,7 +73,9 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
     * Run `rewrite_amd64_en-US.msi` (This allows us to create user-friendly URLs.)
 * **Create PHP Directory:**
     * PHP `C:\PHP` (This is where we'll install PHP.)<br>
-    ![image](https://github.com/user-attachments/assets/eb92c93a-41b0-40a2-939a-55a5232d847d)<br>
+    ![image](https://github.com/user-attachments/assets/bc5db114-9b44-4158-946f-773e03683c16)
+<br>
+
 * **Extract PHP:**
     * Extract `php-7.3.8-nts-Win32-VC15-x86.zip` to `C:\PHP` (This installs the PHP interpreter.)
 * **Visual C++ Redistributable:**
@@ -93,10 +93,11 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
     * Search for "IIS Manager" and run it as administrator.
 * **Register PHP:**
     * In IIS Manager, double-click "PHP Manager" -> "Register new PHP version" -> Browse to `C:\PHP\php-cgi.exe`.<br>
-    ![image](https://github.com/user-attachments/assets/6ea392f0-4fcd-483a-8f3a-97be78b9b861)<br>
+    ![image](https://github.com/user-attachments/assets/efb35536-835e-4e6f-8a63-2b4226d1c350)
+<br>
 * **Restart IIS:**
     * Select the server node in IIS Manager -> "Stop" and then "Start" (This applies our changes.)<br>
-  <img src="https://github.com/user-attachments/assets/296d734d-9b49-419f-aafc-ab38c4ffad13" width="400"><br>
+
 
 ## 7. Installing osTicket (The Core Application)
 
@@ -105,32 +106,38 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
     * Extract `osTicket-v1.15.8.zip` -> Copy the `upload` folder to `C:\inetpub\wwwroot`.
 * **Rename the Folder:**
     * Rename `upload` to `osTicket` in `C:\inetpub\wwwroot` (This creates a logical directory for our application.)<br>
-    ![image](https://github.com/user-attachments/assets/a6d0ae73-bdc2-47c2-9036-8a4ed77208ee)<br>
+    ![image](https://github.com/user-attachments/assets/c3a06be3-fd23-45a0-a8f8-553bb926ae9c)  
+
 * **Restart IIS:**
     * Restart IIS.
 * **Open osTicket in Browser:**
     * In IIS Manager, expand "Sites" -> "Default Web Site" -> "osTicket" -> "Browse *:80.", or follow screenshot below:
-* **Enable PHP Extensions:**
     * If there are errors about extensions, enable `php_imap.dll`, `php_intl.dll`, `php_opcache.dll` in PHP Manager. (These extensions add functionality to PHP.)
     * Refresh the osTicket page to confirm the extensions are enabled. Ignore the bottom two extensions. We will get the necessary functionality for our purposes without them.
 * **Rename Configuration File:**
-    * Rename `ost-sampleconfig.php` to `ost-config.php` in `C:\inetpub\wwwroot\osTicket\include` (This activates the configuration file.)
+    * Rename `ost-sampleconfig.php` to `ost-config.php` in `C:\inetpub\wwwroot\osTicket\include` (This activates the configuration file.)<br>
+   ![image](https://github.com/user-attachments/assets/ebf20466-4bfe-4281-9c9b-e35b3abc11e6)
+  
 * **Set File Permissions:**
     * Set `ost-config.php` permissions to "Everyone" "Full Control" then disable inheritance. (This allows osTicket to write to the file during setup.) Hit Apply and OK when finished for it to persist.
-
+![image](https://github.com/user-attachments/assets/e6ba4d2e-38b4-4fed-bc0b-6d9f859f57bb)
+![image](https://github.com/user-attachments/assets/b6af2a8f-f9ad-4822-8c7a-f25fbf53cdf9)
+![image](https://github.com/user-attachments/assets/640a0808-8e08-4280-9d31-808f5b8d82c2)
 ## 8. Completing osTicket Setup (Final Touches)
 
 * **Purpose:** We're configuring osTicket's database connection and basic settings.
 * **Continue Setup:**
     * Follow the on-screen instructions in your browser.
     * Enter information under System settings and Admin Users. The emails are not relevant but use two different ones.
+      ![image](https://github.com/user-attachments/assets/21863686-1936-46d6-88a3-0ae4d6e0af84)
 * **Install HeidiSQL:**
     * Install HeidiSQL, connect to the local mysql server with `root/root`, create a database called `osTicket`.
+      ![image](https://github.com/user-attachments/assets/895b9b88-89bd-46f5-a12b-569f2e682d14)
 * **Database Configuration:**
     * Enter database details (MySQL Database: `osTicket`, Username: `root`, Password: `root`).
     * Click "Install Now!"
     * Refresh the osTicket database to verify that the tables have populated.
-
+![image](https://github.com/user-attachments/assets/ef16e058-c9f4-4112-a73c-c266f10b909c)
 ## 9. Cleaning Up (Security and Maintenance) (optional)
 
 * **Why?** We're removing unnecessary files and securing the configuration.
