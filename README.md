@@ -41,8 +41,9 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
     * In the Azure portal, navigate to your `osticket-vm`.
     * Click "Connect" -> "RDP" -> "Download RDP file."
     * Open the downloaded RDP file and enter your username (`labuser`) and password.
-    * Click "Yes" to any certificate warnings.
-
+    * Click "Yes" to any certificate warnings.<br>
+    ![image](https://github.com/user-attachments/assets/c85c2d67-6fcb-47c6-a580-66fd2a9afed6)
+<br>    
 ## 3. Preparing Installation Files (Gathering Resources)
 
 * **Purpose:** We need the osTicket installation files and other necessary software.
@@ -57,7 +58,11 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
     * In the Type here to search field at the bottom of the screen, type Control Panel and select the application. Follow the following sequence for installing CGI. Screen shots will follow.
         * "Control Panel" -> "Programs" -> "Turn Windows features on or off."
         * Expand "Internet Information Services" -> "World Wide Web Services" -> "Application Development Features" -> Check "CGI."
-        * Click "OK."
+        * Click "OK."<br>
+        ![image](https://github.com/user-attachments/assets/cc3531a9-8e34-402e-9afd-2b615ac87647)<br>
+![image](https://github.com/user-attachments/assets/15e777a5-1102-4e21-bf58-b2cf53d2ea15)
+      
+<br>
 
 ## 5. Installing Required Components (Dependencies)
 
