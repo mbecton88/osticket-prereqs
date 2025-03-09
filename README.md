@@ -31,7 +31,8 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
         * The other default settings will suffice.
         * Review and Create: Review your settings and click "Create."
         * You should see the following image upon successful completion.<br>
- ![image](https://github.com/user-attachments/assets/f3f0444c-2625-4870-9659-24912ba118c0)
+ ![Screenshot 2025-03-09 at 9 14 02 AM](https://github.com/user-attachments/assets/0e54708e-4db8-4f73-bfdc-5f74df64a172)
+
         <br>
 
 ## 2. Connecting to Your VM (Establishing Access)
@@ -42,7 +43,8 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
     * Click "Connect" -> "RDP" -> "Download RDP file."
     * Open the downloaded RDP file and enter your username (`labuser`) and password.
     * Click "Yes" to any certificate warnings.<br>
-    ![image](https://github.com/user-attachments/assets/c85c2d67-6fcb-47c6-a580-66fd2a9afed6)
+    <![image](https://github.com/user-attachments/assets/c0359ae5-510e-4461-9a54-4aef9523af98)
+
 <br>    
 ## 3. Preparing Installation Files (Gathering Resources)
 
@@ -72,7 +74,8 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
 * **URL Rewrite Module:**
     * Run `rewrite_amd64_en-US.msi` (This allows us to create user-friendly URLs.)
 * **Create PHP Directory:**
-    * PHP `C:\PHP` (This is where we'll install PHP.)
+    * PHP `C:\PHP` (This is where we'll install PHP.)<br>
+    ![image](https://github.com/user-attachments/assets/eb92c93a-41b0-40a2-939a-55a5232d847d)<br>
 * **Extract PHP:**
     * Extract `php-7.3.8-nts-Win32-VC15-x86.zip` to `C:\PHP` (This installs the PHP interpreter.)
 * **Visual C++ Redistributable:**
@@ -89,9 +92,11 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
 * **Open IIS Manager:**
     * Search for "IIS Manager" and run it as administrator.
 * **Register PHP:**
-    * In IIS Manager, double-click "PHP Manager" -> "Register new PHP version" -> Browse to `C:\PHP\php-cgi.exe`.
+    * In IIS Manager, double-click "PHP Manager" -> "Register new PHP version" -> Browse to `C:\PHP\php-cgi.exe`.<br>
+    ![image](https://github.com/user-attachments/assets/6ea392f0-4fcd-483a-8f3a-97be78b9b861)<br>
 * **Restart IIS:**
-    * Select the server node in IIS Manager -> "Stop" and then "Start" (This applies our changes.)
+    * Select the server node in IIS Manager -> "Stop" and then "Start" (This applies our changes.)<br>
+  <img src="https://github.com/user-attachments/assets/296d734d-9b49-419f-aafc-ab38c4ffad13" width="400"><br>
 
 ## 7. Installing osTicket (The Core Application)
 
@@ -99,7 +104,8 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
 * **Extract osTicket:**
     * Extract `osTicket-v1.15.8.zip` -> Copy the `upload` folder to `C:\inetpub\wwwroot`.
 * **Rename the Folder:**
-    * Rename `upload` to `osTicket` in `C:\inetpub\wwwroot` (This creates a logical directory for our application.)
+    * Rename `upload` to `osTicket` in `C:\inetpub\wwwroot` (This creates a logical directory for our application.)<br>
+    ![image](https://github.com/user-attachments/assets/a6d0ae73-bdc2-47c2-9036-8a4ed77208ee)<br>
 * **Restart IIS:**
     * Restart IIS.
 * **Open osTicket in Browser:**
