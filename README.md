@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+</p>
+
 ## Setting Up osTicket on an Azure Windows 10 Virtual Machine (Detailed Guide with Explanations)
 
 This guide will walk you through installing osTicket, a fantastic open-source ticketing system, on a Windows 10 virtual machine (VM) in Microsoft Azure. 
@@ -26,7 +30,9 @@ This guide will walk you through installing osTicket, a fantastic open-source ti
         * Check the Licensing box at the bottom.
         * The other default settings will suffice.
         * Review and Create: Review your settings and click "Create."
-        * You should see the following image upon successful completion.
+        * You should see the following image upon successful completion.<br>
+ ![image](https://github.com/user-attachments/assets/f3f0444c-2625-4870-9659-24912ba118c0)
+        <br>
 
 ## 2. Connecting to Your VM (Establishing Access)
 
